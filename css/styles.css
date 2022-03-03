@@ -6,20 +6,21 @@ body {
   background-color: rgba(255, 255, 255, 1);
   font-family: "Roboto", sans-serif;
 }
-#getStarted::before{
+#getStarted::before {
   display: block;
   content: "";
   height: 60px;
 }
 .white {
   color: #fff;
+  font-family: "Varela Round", sans-serif;
 }
 .body {
   background-image: url(../img/team_work.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
 }
 .nav {
@@ -41,28 +42,116 @@ body {
   color: #fff;
 }
 .header-padding {
-    padding-top: 10rem;
+  padding-top: 10rem;
 }
 .button {
   border-radius: 1.3rem;
-  
+}
+.button-glow:hover {
+  box-shadow: 0 5px 15px rgba(219, 159, 159, 0.726);
+  font-weight: bolder;
 }
 .products {
-    padding-top: 25rem;
+}
+.card {
+  box-shadow: 0 5px 15px rgba(100, 67, 67, 0.726);
 }
 .red-text {
   color: #c60102;
 }
-.blck-text{
-    color: #000;
+.blck-text {
+  color: #000;
 }
-.card-1{
-    border: 2px solid grey;
+.card-1 {
+  border: 2px solid grey;
 }
-.card-1:hover{
-    border: 3px solid #c60102;
-    delay: 500ms;
+.card-1:hover {
+  border-bottom: 2px solid #c60102;
+  delay: 500ms;
 }
-.bg-black{
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 69%, rgba(255,255,255,1) 69%);
+.bg-black {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 69%,
+    rgba(255, 255, 255, 1) 69%
+  );
 }
+/* arrow animation */
+.actionCon {
+  overflow: hidden;
+  width: 970px;
+  height: 300px;
+}
+.actionType3 {
+  text-align: center;
+  vertical-align: middle;
+}
+.actionType3 span.ac_ico {
+  display: block;
+  padding-top: 131px;
+}
+.actionType3 span.ac_ico img {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  animation: translateArr 3s ease-out infinite;
+  -webkit-animation: translateArr 3s ease-out infinite;
+  -moz-animation: translateArr 3s ease-out infinite;
+}
+@keyframes translateArr {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate3d(0, 22px, 0);
+    -webkit-transform: translate3d(0, 22px, 0);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate3d(0, -15px, 0);
+    -webkit-transform: translate3d(0, -15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes translateArr {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate3d(0, 22px, 0);
+    -webkit-transform: translate3d(0, 22px, 0);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate3d(0, -15px, 0);
+    -webkit-transform: translate3d(0, -15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+/* end of animation */
