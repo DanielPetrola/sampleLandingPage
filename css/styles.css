@@ -78,80 +78,40 @@ body {
   );
 }
 /* arrow animation */
-.actionCon {
+.arrowDownAnimated {
   overflow: hidden;
   width: 970px;
   height: 300px;
 }
-.actionType3 {
-  text-align: center;
-  vertical-align: middle;
-}
-.actionType3 span.ac_ico {
+.actionType3 span.arrowDown {
   display: block;
   padding-top: 131px;
 }
-.actionType3 span.ac_ico img {
+.actionType3 span.arrowDown img {
   transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
   opacity: 1;
-  animation: translateArr 3s ease-out infinite;
-  -webkit-animation: translateArr 3s ease-out infinite;
-  -moz-animation: translateArr 3s ease-out infinite;
+  animation: arrowDown 3s ease-out infinite;
 }
-@keyframes translateArr {
+@keyframes arrowDown {
   0% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: translatey(0);
   }
   20% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: translatey(0);
     opacity: 1;
   }
   25% {
     opacity: 0.7;
   }
   33% {
-    transform: translate3d(0, 22px, 0);
-    -webkit-transform: translate3d(0, 22px, 0);
+    transform: translatey(22px);
     opacity: 0.5;
   }
   75% {
-    transform: translate3d(0, -15px, 0);
-    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translatey(15px);
   }
   100% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes translateArr {
-  0% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-  20% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.7;
-  }
-  33% {
-    transform: translate3d(0, 22px, 0);
-    -webkit-transform: translate3d(0, 22px, 0);
-    opacity: 0.5;
-  }
-  75% {
-    transform: translate3d(0, -15px, 0);
-    -webkit-transform: translate3d(0, -15px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: translatey(0);
   }
 }
 /* end of animation */
