@@ -1,10 +1,14 @@
 html,
 body {
+  box-sizing: border-box;
   height: 100%;
   width: auto;
   overflow-y: visible;
   background-color: rgba(255, 255, 255, 1);
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.products, .partners, .about, .review, .contact {
+  background-color: rgba(255, 255, 255, 1);
 }
 #getStarted::before {
   display: block;
@@ -51,10 +55,17 @@ body {
   box-shadow: 0 5px 15px rgba(219, 159, 159, 0.726);
   font-weight: bolder;
 }
-.products {
-}
 .card {
   box-shadow: 0 5px 15px rgba(100, 67, 67, 0.726);
+}
+.card-all {
+  opacity: 0;
+  transform: translatey(50px);
+  transition: all 1s ease;
+}
+.card-appear {
+  opacity: 1;
+  transform: translateY(0px);
 }
 .red-text {
   color: #c60102;
@@ -64,10 +75,17 @@ body {
 }
 .card-1 {
   border: 2px solid grey;
+  transition: all 0.5s ease;
 }
 .card-1:hover {
-  border-bottom: 2px solid #c60102;
-  delay: 500ms;
+  box-shadow: 0 5px 25px rgba(198, 1, 2, 0.726);
+}
+.card div img {
+  width: 90%;
+  transition: width 0.2s ease-out;
+}
+.card:hover div img {
+  width: 97%; 
 }
 .bg-black {
   background: linear-gradient(
@@ -115,3 +133,58 @@ body {
   }
 }
 /* end of animation */
+
+.about-us {
+  opacity: 0;
+  transform: translatex(-50px);
+  transition: all 1s ease;
+}
+.about-us-img {
+  opacity: 0;
+  transform: translatex(50px);
+  transition: all 1s ease;
+}
+.about-appear {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.test {  
+  position: relative;
+}
+.test1{
+  transform: translateX(-20%) translateY(-25%) rotateY(0deg);
+  position: absolute;
+  width: 40%;
+  left: 0%;
+  transition: all 0.4s ease-in-out;
+}
+.test2 {
+  transform: translateX(0%) translateY(-20%);
+  position: absolute;
+  width: 30%;
+  right: 0%;
+  transition: all 0.4s ease-in-out;
+}
+.test1-appear {
+  transform: translateX(-10%) translateY(-25%);
+  position: absolute;
+  left: 0%;
+  width: 50%;  
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.test2-appear {  
+  transform: translateX(0%) translateY(-20%);
+  position: absolute;
+  width: 40%;
+  right: 0%;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.contact-form {
+  transform: translatex(-100%);
+  transition: all 1s ease-out;
+}
+.contact-form-appear {
+  transform: translateY(0%);
+}
